@@ -1,4 +1,7 @@
-FROM azimniit/website
-docker login registry-1.docker.io/v1
+FROM ubuntu 
+RUN apt-get update 
+RUN apt-get install -y apache2 
+RUN apt-get install -y apache2-utils 
+RUN apt-get clean 
 ADD . /var/www/html 
 
